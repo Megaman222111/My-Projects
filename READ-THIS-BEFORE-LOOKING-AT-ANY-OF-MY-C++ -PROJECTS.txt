@@ -1,4 +1,2 @@
 These are the C++ projects that I have worked on. For each project there is a .cpp file.
-Also, if you want to see what these programs can do, copy the code and then paste the code into GDB Online Debugger, or any other compiler and runner. If you are using GDB Online, then delete the template code, then copy my code in. 
-Link for GDB Online Debugger: 
-https://www.onlinegdb.com/
+Also, if you want to see what these programs can do, copy the code and then paste the code into any other compiler and runner. 
