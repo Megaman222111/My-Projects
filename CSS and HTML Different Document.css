@@ -1,0 +1,29 @@
+body {
+    background-image: url("https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+   }
+h1{
+    text-align: center;
+}
+table {
+    padding: 0px;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+th{
+    color: red;
+    font-size: 50px;
+    padding: 10px;
+    border: 8px dotted red;
+    border-style: dotted;
+}
+
+td {
+    color: green;
+    font-size: 20px;
+    padding: 10px;
+    border: 8px dotted red;
+    border-style: dotted;
+}
