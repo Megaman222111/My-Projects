@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <div id="options">
+            <input type="checkbox" id="pasta" @change='pasta2()' >Pasta
+            <br>
+            <input type="checkbox" id="pizza">Pizza
+            <br>
+            <input type="checkbox" id="noodles">Noodles
+            <br>
+            <input type="checkbox" id="rice">Rice
+            <br>
+            <span>Your Total: {{ total }}</span>
+        </div>
+        <script src="https://unpkg.com/vue@3.1.4/dist/vue.global.js"></script>
+        <script>
+        const a =({
+            data() {
+                return{
+                    pasta : false,
+                    pizza : false,
+                    noodles : false,
+                    rice : false,
+                    total : 0,
+                }
+            },
+
+            methods: {
+                pasta2: function(){
+                    var pasta1 = document.getElementById("pasta")
+                    if(pasta1.checked == true){
+                        this.pasta = true;
+                        this.total = this.total + 9.99
+                    }
+                    if(pasta1.checked == false){
+                        this.pasta = true;
+                        this.total = this.total - 9.99
+                    }
+                },
+
+                pizza2: function(){
+                    this.totalcharacter = this.message.length;
+                },
+
+                noodles2: function(){
+                    this.totalcharacter = this.message.length;
+                },
+
+                rice2: function(){
+                    this.totalcharacter = this.message.length;
+                },
+                }
+        })
+        const app = Vue.createApp(a).mount('#options');
+        </script>
+    </body>
+</html>
