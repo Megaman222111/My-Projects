@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+ <body>
+   <div id='myapp'>
+     <textarea v-model='message' @keyup='charCount()' ></textarea>
+     <br/>
+     <span>{{ totalcharacter }} characters</span>
+     <br><br>
+
+     <textarea v-model='message2' @keyup='charCompare()' id="input"></textarea>
+     <br>
+     <span>{{ 200 - totalcharacter2 }} characters left</span>
+     <span id="warning-text"></span>
+     <br><br>
+   </div>
+
+   <script src="https://unpkg.com/vue@3.1.4/dist/vue.global.js"></script>
+   <script>
+   const a =({
+     data() {
+         return{
+             message: "",
+             totalcharacter: 0,
+             message2: "",
+             totalcharacter2: 0,
+        }
+     },
+
+     methods: {
+       charCount: function(){
+         this.totalcharacter = this.message.length;
+       },
+
+       charCompare: function(){
+           this.totalcharacter2 = this.message2.length
+           if (this.message2.length >= 200){
+               if(this.message2.length == 200){
+                document.getElementById("input").disabled = true;
+               }
+
+               if(this.message2.length > 200){
+                string = document.getElementById("input").value
+                string = string.slice(0, 200)
+                document.getElementById("input").value = string
+                document.getElementById("input").disabled = true;
+               }
+           }
+       },
+     }
+   })
+   const app = Vue.createApp(a).mount('#myapp');
+   </script>
+ </body>
+</html>
